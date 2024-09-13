@@ -24,7 +24,7 @@ class ConvertTemp(Resource):
         return {'converted_temp': converted_temp, 'target_scale': target_scale}
 
     def convert_temperature(self, temp, scale, target_scale):
-        # Conversion logic
+        # Conversion logictest
         if scale == target_scale:
             return temp
 
