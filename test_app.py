@@ -40,7 +40,7 @@ def test_convert_temp_k_to_f(client, temp, expected):
     assert response.status_code == 200
     assert response.json['converted_temp'] == pytest.approx(expected, rel=1e-2)
 
-# Invalid scale handling
+# Invalid scale handling -test
 def test_convert_temp_invalid_scale(client):
     response = client.get('/convert-temp?temp=100&scale=unknown&target_scale=celsius')
     assert response.status_code == 400
